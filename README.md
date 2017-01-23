@@ -34,3 +34,9 @@ To make it useful for Tibetan, there's a few things you NEED to do:
 
 (4) In the space available, copy & paste the following (the entire unicode set of Tibetan characters): 
 ༀ༁༂༃༸༹ཀཁགགྷངཅཆཇ཈ཉཊཋཌཌྷཎཏཐདདྷནཔཕབབྷམཙཚཛཛྷཝཞཟའཡརལཤཥསཧཨཀྵཪཫཬ཭཮཯཰ཱཱཱིིུུྲྀཷླྀཹེཻོཽཾཿ྄ཱྀྀྂྃ྅ྌྍྎྏྐྑྒྒྷྔྕྖྗ྘ྙྚྛྜྜྷྞྟྠྡྡྷྣྤྥྦྦྷྨྩྪྫྫྷྭྮྯྰྱྲླྴྵྶྷྸྐྵྺྻྼ
+
+(5) In "Append Definition", add the 'tsheg' (་)
+
+(6) Be sure to check the boxes! And hit "apply"... 
+
+Note: In Linux OS, like Ubuntu, you should be good to go. In Windows, there is a problem: While AntConc can internally read the Tibetan, it doesn't recognize file names in Tibetan... I'll post a version of the corpus that uses only ASCII characters in the following weeks. 
