@@ -20,9 +20,9 @@ The Nanhai Corpus Folder contains 3 subfolders:
 (3) LEMMA -- some rudimentary Python scripts useful for "cleaning" the data for headword analysis (a basic stemmer, a tsheg-stripper). POS (part of speech) and true Lemma tagging are under construction... 
 
 Enjoy! Send feedback to the repo developer: thedirk[AT]gmail.com 
------------------------------------------------------------------------------------------------
+
 Instructions for using WordSmith in analysis: See the update UTF16 files. WordSmith can't analyze UTF8 or UTF8-SIG encodings. 
------------------------------------------------------------------------------------------------
+
 Instructions for using AntConc in analysis: 
 
 Download AntConc from http://www.laurenceanthony.net/software.html 
