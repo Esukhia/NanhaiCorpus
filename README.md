@@ -21,9 +21,21 @@ The Nanhai Corpus Folder contains 3 subfolders:
 
 Enjoy! Send feedback to the repo developer: thedirk[AT]gmail.com 
 
-Instructions for using WordSmith in analysis: See the update UTF16 files. WordSmith can't analyze UTF8 or UTF8-SIG encodings. 
+Instructions for using WordSmith in analysis: See the update UTF16 files. WordSmith can't analyze UTF8 or UTF8-SIG encodings. There are still some kinks to work out, and I'll be updating this repo with any strides we make in that area. A better, FREE option, for analyzing Tibetan corpora is AntConc... 
 
 Instructions for using AntConc in analysis: 
+
+FIRST, the bad news: You will need MAC or LINUX for AntConc. While there is a Windows version (that works for Latin-based alphabets), the Tibetan font encodings are an insurmountable issue for AntConc in Windows. We've spent days and days trying to come up with a solution to get AntConc working in Windows with Tibetan, to no avail; if you have a solution, please share it! 
+
+NOW, the good news: Fortunately, those of you with Windows machines CAN still use AntConc... in a round-about way. What you'll need to do is install a Virtual Machine with an Ubuntu OS (or your other preferred Linux distro). For that, follow the instructions here: https://www.lifewire.com/install-ubuntu-linux-windows-10-steps-2202108 
+
+If you're on a 64-bit machine, you'll also need to add the i386 architechture & libraries. From a terminal, enter:
+
+(1) sudo apt-get install libc6-i386
+(2) sudo dpkg --add-architecture i386
+(3) sudo apt-get install libx11-6:i386 libxss1:i386 libxft2:i386
+
+That's it! 
 
 Download AntConc from http://www.laurenceanthony.net/software.html 
 To make it useful for Tibetan, there's a few things you NEED to do: 
