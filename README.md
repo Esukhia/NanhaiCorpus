@@ -19,8 +19,12 @@ The Nanhai Corpus Folder contains 3 subfolders:
 
 (3) LEMMA -- some rudimentary Python scripts useful for "cleaning" the data for headword analysis (a basic stemmer, a tsheg-stripper). POS (part of speech) and true Lemma tagging are under construction... 
 
+The corpus texts are currently available in 3 Unicode encodings: 1) utf-16 (sometimes simpy called "Unicode", as in NotePad), 2) utf-8, and 3) utf-8-sig. Which one you use will depend on your software and OS (see below for some options). I've also included the Python script used to convert between encodings. 
+
 Enjoy! Send feedback to the repo developer: thedirk[AT]gmail.com 
 
+INSTRUCTIONS for USING the CORPUS
+------------------------------------
 Instructions for using WordSmith in analysis: See the update UTF16 files. WordSmith can't analyze UTF8 or UTF8-SIG encodings. There are still some kinks to work out, and I'll be updating this repo with any strides we make in that area. A better, FREE option, for analyzing Tibetan corpora is AntConc... 
 
 Instructions for using AntConc in analysis: 
