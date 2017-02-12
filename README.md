@@ -29,9 +29,9 @@ Instructions for using WordSmith in analysis: See the update UTF16 files. WordSm
 
 Instructions for using AntConc in analysis: 
 
-FIRST, the bad news: You will need MAC or LINUX for AntConc. While there is a Windows version (that works for Latin-based alphabets), the Tibetan font encodings are an insurmountable issue for AntConc in Windows. We've spent days and days trying to come up with a solution to get AntConc working in Windows with Tibetan, to no avail; if you have a solution, please share it! 
+FIRST, the bad news: MAC or LINUX seem to work best for AntConc. While there is a Windows version, we've had trouble on many machines with the Tibetan font encodings; yet, others we know have gotten Tibetan working fine in Windows. We don't have a clear picture of why this is, so if you figure it out, please share it! 
 
-NOW, the good news: Fortunately, those of you with Windows machines CAN still use AntConc... in a round-about way. What you'll need to do is install a Virtual Machine with an Ubuntu OS (or your other preferred Linux distro). For that, follow the instructions here: https://www.lifewire.com/install-ubuntu-linux-windows-10-steps-2202108 
+NOW, the good news: Give your Windows AntConc a try! If you aren't able to get it working, those of you with Windows machines CAN still use AntConc... in a round-about way. What you can do is install a Virtual Machine with an Ubuntu OS (or your other preferred Linux distro). For that, follow the instructions here: https://www.lifewire.com/install-ubuntu-linux-windows-10-steps-2202108 
 
 If you're on a 64-bit machine, you'll also need to add the i386 architechture & libraries. From a terminal, enter:
 
