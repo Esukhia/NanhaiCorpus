@@ -29,7 +29,7 @@ Instructions for using WordSmith in analysis: See the update UTF16 files. WordSm
 
 Instructions for using AntConc in analysis: 
 
-FIRST, the bad news: MAC or LINUX seem to work best for AntConc. While there is a Windows version, we've had trouble on many machines with the Tibetan font encodings; yet, others we know have gotten Tibetan working fine in Windows. We don't have a clear picture of why this is, so if you figure it out, please share it! 
+FIRST, the bad news: MAC or LINUX seem to work best for AntConc. While there is a Windows version, we've had trouble on many machines with the Tibetan font encodings. We don't have a clear picture of why this is, so if you figure it out, please share it! (of course, there's always the option of converting to Wylie and analyzing it in Roman characters; this, however, defeats the purpose of word spacing).
 
 NOW, the good news: Give your Windows AntConc a try! If you aren't able to get it working, those of you with Windows machines CAN still use AntConc... in a round-about way. What you can do is install a Virtual Machine with an Ubuntu OS (or your other preferred Linux distro). For that, follow the instructions here: https://www.lifewire.com/install-ubuntu-linux-windows-10-steps-2202108 
 
@@ -56,5 +56,3 @@ To make it useful for Tibetan, there's a few things you NEED to do:
 (5) In "Append Definition", add the 'tsheg' (་)
 
 (6) Be sure to check the boxes! And hit "apply"... 
-
-Note: In Linux OS, like Ubuntu, you should be good to go. In Windows, there is a problem: While AntConc can internally read the Tibetan, it doesn't recognize file names in Tibetan... I'll post a version of the corpus that uses only ASCII characters in the following weeks. 
