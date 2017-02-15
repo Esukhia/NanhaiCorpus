@@ -25,23 +25,22 @@ Enjoy! Send feedback to the repo developer: thedirk[AT]gmail.com
 
 INSTRUCTIONS for USING the CORPUS
 ------------------------------------
-Instructions for using WordSmith in analysis: See the update UTF16 files. WordSmith can't analyze UTF8 or UTF8-SIG encodings. There are still some kinks to work out, and I'll be updating this repo with any strides we make in that area. A better, FREE option, for analyzing Tibetan corpora is AntConc... 
+Instructions for using SketchEngine for analysis: 
 
-Instructions for using AntConc in analysis: 
+Make an account at: https://www.sketchengine.co.uk/ 
 
-FIRST, the bad news: MAC or LINUX seem to work best for AntConc. While there is a Windows version, we've had trouble on many machines with the Tibetan font encodings. We don't have a clear picture of why this is, so if you figure it out, please share it! (of course, there's always the option of converting to Wylie and analyzing it in Roman characters; this, however, defeats the purpose of word spacing).
+The CORPUS_TEXT_VERTICAL_FILES are for sketchengine. Compress them into zips and follow the instructions at SketchEngine. 
 
-NOW, the good news: Give your Windows AntConc a try! If you aren't able to get it working, those of you with Windows machines CAN still use AntConc... in a round-about way. What you can do is install a Virtual Machine with an Ubuntu OS (or your other preferred Linux distro). For that, follow the instructions here: https://www.lifewire.com/install-ubuntu-linux-windows-10-steps-2202108 
+Instructions for using WordSmith for analysis: 
 
-If you're on a 64-bit machine, you'll also need to add the i386 architechture & libraries. From a terminal, enter:
+The CORPUS_TEXT_UTF16 files are for WordSmith. WordSmith can't analyze UTF8 or UTF8-SIG encodings. There are still some kinks to work out, and I'll be updating this repo with any strides we make in that area. A better, FREE option, for analyzing Tibetan corpora is AntConc... 
 
-(1) sudo apt-get install libc6-i386
-(2) sudo dpkg --add-architecture i386
-(3) sudo apt-get install libx11-6:i386 libxss1:i386 libxft2:i386
-
-That's it! 
+Instructions for using AntConc for analysis (our top choice): 
 
 Download AntConc from http://www.laurenceanthony.net/software.html 
+
+The CORPUS_TEXT_UTF8 files are for AntConc (utf-8 is the default encoding for AntConc, though it can be set to others). At the moment, AntConc in Windows doesn't accept Tibetan in the file name. We'll be re-naming the files to address this. Linux AntConc can handle them as-is. I'm unsure about MAC. 
+
 To make it useful for Tibetan, there's a few things you NEED to do: 
 
 (1) enter "Global Settings". 
