@@ -6,14 +6,14 @@ import re
 import os
 
 
-for file in os.listdir('*/Regex/input'):
+for file in os.listdir('./Regex/input'):
     print(file)
     # check the encoding
     try:
-        with codecs.open('*/Regex/input/' + file, 'r', 'utf-8') as f:
+        with codecs.open('./Regex/input/' + file, 'r', 'utf-8') as f:
             current_file = f.read()
     except:
-        with codecs.open('*/Regex/input/' + file, 'r', 'utf-16') as f:
+        with codecs.open('./Regex/input/' + file, 'r', 'utf-16') as f:
             current_file = f.read()
 
 
@@ -62,6 +62,6 @@ for file in os.listdir('*/Regex/input'):
         current_file = re.sub(regex[0], regex[1], current_file)
     
     # output results
-    pre = 'Stemmed_'
-    with codecs.open('*/Regex/output/'+pre+file, 'w', 'utf-8') as f:
+    pre = 'Lemmatized_'
+    with codecs.open('./Regex/output/'+file, 'w', 'utf-8-sig') as f:
         f.write(current_file)

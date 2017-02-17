@@ -1,9 +1,10 @@
 #!/usr/bin/env python
-# renaming files
+# -*- coding: utf-8 -*-
 
+import codecs
 import re
 import os
-import codecs
+
 
 for file in os.listdir('./Regex/input'):
     # print(file.encode("utf-8-sig"))
@@ -15,11 +16,17 @@ for file in os.listdir('./Regex/input'):
         with codecs.open('./Regex/input/' + file, 'r', 'utf-16') as f:
             current_file = f.read()
 
+    # regex list
+    regexes = [
+                (r'(་ |་ |\s+)', r'\r')
+
+              ]
+
+    # apply regexes
+    for regex in regexes:
+        current_file = re.sub(regex[0], regex[1], current_file)
+    
     # output results
-    name = 'utf-16_'
-    with codecs.open('./Regex/output/UTF16' + file, 'w', 'utf-16') as f:
-        f.write(current_file)
-    with codecs.open('./Regex/output/UTF8' + file, 'w', 'utf-8') as f:
-        f.write(current_file)
-    with codecs.open('./Regex/output/UTF8SIG' + file, 'w', 'utf-8-sig') as f:
+    pre = 'Vertical_'
+    with codecs.open('./Regex/output/' + file, 'w', 'utf-8-sig') as f:
         f.write(current_file)
