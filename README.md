@@ -11,15 +11,22 @@ The Nanhai Corpus is a collection of word-segmented Tibetan totalling some 1.2 m
 
 A 4th section is under construction, representing Middle Tibetan texts (aka "Classical" Tibetan—we prefer the more accurate, modern linguistic term "Middle Tibetan" to describe this register and era: Old Tibetan, Middle Tibetan, Modern Tibetan just as Old English, Middle English, Modern English. 
 
-The Nanhai Corpus Folder contains 3 subfolders: 
+The Nanhai Corpus Folder contains (A) 5 subfolders & (B) 4 simple Python scripts: 
 
-(1) CORPUS_TEXT -- contains the raw, word-segmented data (to be analyzed by corpus tools like AntConc [instructions below] or WordSmith, etc.) 
+(A) 
+(A.1-4) CORPUS_TEXT -- this series of 4 contains the raw, word-segmented data (to be analyzed by corpus tools like AntConc [instructions below] or WordSmith, etc.) -- in various encodings (UTF-8 [for AntConc], UTF-8-SIG, & UTF-16 [also called "Unicode", for WordSmith], and a "Vertical Files" version for SketchEngine). 
 
-(2) FREQ_LISTS -- some rudimentary frequency lists, by level. The best-made thus far is "GSL_LevelA1.txt", which is the 300 most frequent headwords from a balanced subsection of the full corpus, representing 50% speech, 50% writing. 
+(A.5) FREQ_LISTS -- some rudimentary frequency lists, by level. The best-made thus far is "GSL_LevelA1.txt", which is the 300 most frequent headwords from a balanced subsection of the full corpus, representing 50% speech, 50% writing. 
 
-(3) LEMMA -- some rudimentary Python scripts useful for "cleaning" the data for headword analysis (a basic stemmer, a tsheg-stripper). POS (part of speech) and true Lemma tagging are under construction... 
+(B) -- some rudimentary Python scripts that were used for "cleaning" the data for headword analysis (a basic stemmer, a tsheg-stripper). These may also be applied to other word-segmented data you might have. POS (part of speech) and true Lemma tagging are under construction... 
 
-The corpus texts are currently available in 3 Unicode encodings: 1) utf-16 (sometimes simpy called "Unicode", as in NotePad), 2) utf-8, and 3) utf-8-sig. Which one you use will depend on your software and OS (see below for some options). I've also included the Python script used to convert between encodings. 
+(B.1) convert_UTF_encode.py -- takes a Unicode text (or set of files of various Unicode encodings) and normalizes them -- outputs folders of 3 versions of the input, in the 3 most useful encodings (UTF-8, UTF-8-SIG, UTF-16). 
+
+(B.2) stemmer.py -- strips words of their case-endings, normalizes particles / prepositions (techinically postpositions) to one form, and puts the most frequent verbs into a common stem. *VERY* rudimentary. Only useful for about the first 1,000-2,000 most-frequent words... 
+
+(B.3) TshegRegex.py -- the TshegRegex uses regular expressions (regex) to strip corpus files of their final tshegs (so corpus analysis tools don't see token instances like ཡིན་ & ཡིན། as different words, for example). It also normalizes spacing (all return carriages, tabs, half-spaces, etc., to a regular white space). The output is a perfectly evenly spaced text. 
+
+(B.4) Vertical_File_Creator.py -- takes input and puts it into simple "Verticle File" format. Useful if you want to use simple SketchEngine procedures, like concordancing. This will become more useful once we have POS tags and a Lemmatizer, which will "unlock" the real useful, advanced features of SketchEngine. 
 
 Enjoy! Send feedback to the repo developer: thedirk[AT]gmail.com 
 

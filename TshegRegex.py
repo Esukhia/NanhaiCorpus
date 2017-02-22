@@ -5,24 +5,21 @@ import codecs
 import re
 import os
 
-for file in os.listdir('./Regex/input'):
+for file in os.listdir('D:/Corpora/python/Regex/input'):
     # print(file.encode("utf-8-sig"))
     # check the encoding
     try:
-        with codecs.open('./Regex/input/' + file, 'r', 'utf-8') as f:
+        with codecs.open('D:/Corpora/python/Regex/input/' + file, 'r', 'utf-8') as f:
             current_file = f.read()
     except:
-        with codecs.open('./Regex/input/' + file, 'r', 'utf-16') as f:
+        with codecs.open('D:/Corpora/python/Regex/input/' + file, 'r', 'utf-16') as f:
             current_file = f.read()
 
     # regex list
     regexes = [
                 
-                (r'(་ |་ |\s+)', r' '),
-                (r'་ ', r' '),
-                (r'་ ', r' '),
-                (r'་།', r' །'),
-                (r'། ', r' ། ')
+                (r'\s*་*\s*།\s*', r' ། '),
+                (r'(\s*་*\s+)', r' ')
 
               ]
 
@@ -32,5 +29,5 @@ for file in os.listdir('./Regex/input'):
     
     # output results
     pre = 'un-tsheged_'
-    with codecs.open('./Regex/output/' + file, 'w', 'utf-8') as f:
+    with codecs.open('D:/Corpora/python/Regex/output/' + file, 'w', 'utf-8-sig') as f:
         f.write(current_file)
