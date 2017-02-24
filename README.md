@@ -38,7 +38,7 @@ Instructions for using SketchEngine for analysis:
 
 Make an account at: https://www.sketchengine.co.uk/ 
 
-The CORPUS_TEXT_VERTICAL_FILES are for sketchengine. Compress them into zips and follow the instructions at SketchEngine. 
+The CORPUS_TEXT_VERTICAL_FILES are for sketchengine. Compress a pre-selected sub-section into zips and follow the instructions at SketchEngine. 
 
 Instructions for using WordSmith for analysis: 
 
