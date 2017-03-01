@@ -16,7 +16,7 @@ The corpus itself contains 3 main sections:
   
 (A.1-4.iii) Modern Writing -- Labeled "Writing_Modern_Children'sLit..." or "Writing_Modern_News_XXXX_YYYY", where XXXX is the dialect/region represented by the data source (being AMDO, KHAM, LHASA, or CENTRAL) and YYYY is the topic/genre of the excerpt. 
 
-A 4th section is under construction, representing Middle Tibetan texts (commonly called "Classical" Tibetan -- we prefer the more accurate, modern linguistic term "Middle Tibetan" to describe this register and era: Old Tibetan, Middle Tibetan, Modern Tibetan just as Old English, Middle English, Modern English). 
+A 4th section is under construction, representing Middle Tibetan texts (commonly called "Classical" Tibetan -- Old Tibetan, Middle Tibetan, Modern Tibetan just as Old English, Middle English, Modern English) and "Old Church Tibetan" texts (canonical texts that are Old Tibetan in Middle Tibetan spellings -- a term from Roy Andrew Miller). 
 
 (A.5) FREQ_LISTS -- some rudimentary frequency lists, by level. The best-made thus far is "GSL_LevelA1.txt", which is the 300 most frequent headwords from a balanced subsection of the full corpus, representing 50% speech, 50% writing. 
 
