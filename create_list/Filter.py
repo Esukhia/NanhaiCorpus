@@ -1,3 +1,5 @@
+import os
+
 def tib_sort(l):
     """
     sorts a list according to the Tibetan order
@@ -54,5 +56,7 @@ def compare_lists(base_list, to_compare_list):
 # write_file('in_tsikchen.txt', '\n'.join(tib_sort(in_tsikchen)))
 
 # # the list of words in recordings_4.txt that are not in ['Nanhai wrong spellings.txt', 'Nanhai word list - to keep.csv']
-truc, muche = compare_lists(['to_compare_lists/tsikchen.txt', 'to_compare_lists/Nanhai word list - to keep.csv'], ['build_corpus_lexicon_output/corpus_vocab_tib_order.txt'])
-write_file('Filter_output/nanhai_minus_cleantsikchen_to_keep.txt', '\n'.join(tib_sort(truc)))
+to_compare_path = 'to_compare_lists'
+to_compare = ['{}/{}'.format(to_compare_path, a) for a in os.listdir(to_compare_path)]
+truc, muche = compare_lists(to_compare, ['build_corpus_lexicon_output/corpus_vocab_tib_order.txt'])
+write_file('Filter_output/nanhai_minus_processed_total.txt', '\n'.join(tib_sort(truc)))
