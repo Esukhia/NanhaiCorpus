@@ -1,5 +1,6 @@
 import os
 from collections import defaultdict
+import re
 
 
 def is_tibetan_letter(char):
@@ -61,7 +62,7 @@ def find_corpus_non_tib(file_list):
             non_tib = non_tib_chars(c)
             for n in non_tib:
                 all_non_tib[n] += 1
-    write_file('non_tib_characters.txt', '\n'.join(['{}: {}'.format(k, v) for k, v in all_non_tib.items()]))
+    write_file('build_corpus_lexicon_output/non_tib_characters.txt', '\n'.join(['{}: {}'.format(k, v) for k, v in all_non_tib.items()]))
     return all_non_tib
 
 
@@ -74,7 +75,7 @@ def extract_vocab_with_freq(files_list):
             clean = c
             for a in non_tib_total:
                 clean = clean.replace(a, '')
-                clean = clean.strip('་')
+            clean = re.sub(r'^[་།༄༅]*(.+)[་།༄༅]*$', r'\1', clean)
             total[clean] += 1
     return total
 
@@ -97,8 +98,8 @@ def main():
     raw_corpus_path = '../CORPUS_TEXT_UTF8SIG'
     raw_corpus_files = ['{}/{}'.format(raw_corpus_path, a) for a in os.listdir(raw_corpus_path)]
     corpus_vocab = extract_vocab_with_freq(raw_corpus_files)
-    write_file('corpus_vocab_tib_order.txt', '\n'.join(tib_sort(corpus_vocab)))
+    write_file('build_corpus_lexicon_output/corpus_vocab_tib_order.txt', '\n'.join(tib_sort(corpus_vocab)))
     freq_sorted = sorted([(k, v) for k, v in corpus_vocab.items()], key=lambda x: x[1], reverse=True)
-    write_file('corpus_vocab_freq_order.txt', '\n'.join(['{},{}'.format(a[0], a[1]) for a in freq_sorted]))
+    write_file('build_corpus_lexicon_output/corpus_vocab_freq_order.txt', '\n'.join(['{},{}'.format(a[0], a[1]) for a in freq_sorted]))
 
 main()
