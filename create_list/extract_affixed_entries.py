@@ -1,10 +1,6 @@
 import PyTib
 from PyTib.common import open_file, write_file
 
-# initialize full lexicon
-s = PyTib.Segment()
-s.include_user_vocab()
-
 
 parts = PyTib.getSylComponents()
 
@@ -16,6 +12,11 @@ def split_word(word):
     return start, end
 
 lexicon = open_file('build_corpus_lexicon_output/corpus_vocab_tib_order.txt').strip().split('\n')
+
+# initialize full lexicon
+s = PyTib.Segment()
+s.include_user_vocab(local_vocab=lexicon)
+
 affixed = []
 non_affixed = []
 for word in lexicon:
