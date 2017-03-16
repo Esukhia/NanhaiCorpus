@@ -75,7 +75,7 @@ def extract_vocab_with_freq(files_list):
             clean = c
             for a in non_tib_total:
                 clean = clean.replace(a, '')
-            clean = re.sub(r'^[་།༄༅]*(.+)[་།༄༅]*$', r'\1', clean)
+            clean = re.sub(r'^[༌་༄༅།༑༔\s\t]*(.*)[༌་༄༅།༑༔\s\t]*$', r'\1', clean)
             total[clean] += 1
     return total
 
